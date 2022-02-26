@@ -1,4 +1,3 @@
-
 def s(dna):
     dna = dna.upper() #makes it uppercase in case we get it in lower
     dict = {} #opens a dictionary
@@ -16,19 +15,17 @@ def s(dna):
 
 print (s(dna))
 
-
 def fibonacci_rabbits(n, k):
     if n<=2:
         return 1
     else:
-        return (fibonacci_rabbits(n-1, k)  + fibonacci_rabbits(n-2, k)*k)
+        return (fibonacci_rabbits(n-1, k)  + fibonacci_rabbits(n-2, k)*k) #the math stuff
     print(fibonacci_rabbits(n,k))
 
-
 def hamming_dist (dna1, dna2):
-    count = 0
-    for index in range(len(dna1)):
-        if dna1[index] != dna2[index]:
-            count = count + 1
+    count = 0 #resets count
+    for index in range(len(dna1)): 
+        if dna1[index] != dna2[index]: #checks for when they're not equal
+            count = count + 1 #adds a tally for each time it isn't equal
     return count
 print(hamming_dist (dna1, dna2))
